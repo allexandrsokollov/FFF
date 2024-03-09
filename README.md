@@ -13,7 +13,7 @@
 ## Описание проекта
 
 ## Средства реализации
-+ Jira
++ [Jira](https://assrippinginn.atlassian.net/jira/software/projects/KAN/boards/1)
 + [Figma](https://www.figma.com/file/C1PXWguSbavJNXFfsZlvRr/FFF-%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D1%8B?type=design&node-id=0-1&mode=design&t=6XzkaxL46eammNNE-0)
 + [Miro](https://miro.com/app/board/uXjVNj7RoNg=/)
 ## Диаграммы
