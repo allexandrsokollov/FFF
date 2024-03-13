@@ -1,0 +1,738 @@
+<mxfile host="app.diagrams.net" modified="2024-03-13T10:49:25.231Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0" etag="r2dfru_jb2Q2wFDjiMfK" version="24.0.5" type="device">
+  <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
+    <mxGraphModel dx="2772" dy="888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NAoeqm92_gp_XL33UbnM-41" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="580" y="20" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-42" value="Приложение запустилось" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-41" target="NAoeqm92_gp_XL33UbnM-43" edge="1">
+          <mxGeometry x="0.2" y="15" width="80" relative="1" as="geometry">
+            <mxPoint x="570" y="450" as="sourcePoint" />
+            <mxPoint x="571.8400000000001" y="552.88" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-43" value="Ожидание выбора входа в систему" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-44" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-43" target="NAoeqm92_gp_XL33UbnM-46" edge="1">
+          <mxGeometry x="0.5" y="70" width="80" relative="1" as="geometry">
+            <mxPoint x="435" y="630" as="sourcePoint" />
+            <mxPoint x="534.5" y="670" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="460" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-45" value="Выбран вариант зарегистрироваться" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-44" vertex="1" connectable="0">
+          <mxGeometry x="-0.0911" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-46" target="NAoeqm92_gp_XL33UbnM-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-82" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-81" vertex="1" connectable="0">
+          <mxGeometry x="0.0133" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-83" value="Открыта страница&lt;div&gt;&amp;nbsp;регистрации&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-81" vertex="1" connectable="0">
+          <mxGeometry x="0.0133" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-46" value="Открытие страницы регистрации" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="290" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-162" target="NAoeqm92_gp_XL33UbnM-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1170" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-50" value="[Выбрана кнопка создания&lt;div&gt;&amp;nbsp;нового счёта]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-49" vertex="1" connectable="0">
+          <mxGeometry x="0.224" y="3" relative="1" as="geometry">
+            <mxPoint x="-53" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-163" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-51" target="NAoeqm92_gp_XL33UbnM-162" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-164" value="Переход&lt;div&gt;на страницу&lt;/div&gt;&lt;div&gt;транзакций&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-163" vertex="1" connectable="0">
+          <mxGeometry x="-0.0445" y="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-51" value="Ожидание выбора пользователя" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="545" y="1110" width="110" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-51" target="NAoeqm92_gp_XL33UbnM-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-55" target="NAoeqm92_gp_XL33UbnM-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-54" value="Страница открылась" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-53" vertex="1" connectable="0">
+          <mxGeometry x="-0.3257" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-201" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-55" target="NAoeqm92_gp_XL33UbnM-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-55" value="Открытие страницы для создания счёта" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-58" target="NAoeqm92_gp_XL33UbnM-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="1360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-57" value="Поля формы&amp;nbsp;&lt;div&gt;заполнены&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-56" vertex="1" connectable="0">
+          <mxGeometry x="-0.25" relative="1" as="geometry">
+            <mxPoint x="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-58" value="Ожидание заполнения формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="573" y="1270" />
+              <mxPoint x="573" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-60" value="Данные сохранены,&amp;nbsp;&lt;div&gt;открыта домашняя страница&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-59" vertex="1" connectable="0">
+          <mxGeometry x="-0.0783" relative="1" as="geometry">
+            <mxPoint x="-52" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-61" value="Сохранение счёта" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="464" y="1230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-51" target="NAoeqm92_gp_XL33UbnM-69" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="1210.0526315789475" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-65" value="Выбор кнопки создания&lt;div&gt;транзакции&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-64" vertex="1" connectable="0">
+          <mxGeometry x="-0.165" y="-2" relative="1" as="geometry">
+            <mxPoint x="8" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-69" target="NAoeqm92_gp_XL33UbnM-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-68" value="Страница открыта" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-67" vertex="1" connectable="0">
+          <mxGeometry x="-0.4933" relative="1" as="geometry">
+            <mxPoint x="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-69" value="Открытие страницы для создания новой транзакци" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1090" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-72" target="NAoeqm92_gp_XL33UbnM-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-71" value="[Категория выбрана]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-70" vertex="1" connectable="0">
+          <mxGeometry x="0.01" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-169" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-72" target="NAoeqm92_gp_XL33UbnM-168" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-170" value="[Выбрана кнопка создания&lt;div&gt;новой категории]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-169" vertex="1" connectable="0">
+          <mxGeometry x="-0.2539" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-72" value="Ожидание выбора категории" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="1160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-75" target="NAoeqm92_gp_XL33UbnM-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-74" value="Поля формы заполнены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-73" vertex="1" connectable="0">
+          <mxGeometry x="-0.05" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-75" value="Ожидание заполнения полей формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="830" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-166" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-78" target="NAoeqm92_gp_XL33UbnM-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="1290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-167" value="Данные сохранены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-166" vertex="1" connectable="0">
+          <mxGeometry x="-0.7476" relative="1" as="geometry">
+            <mxPoint x="30" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-78" value="Сохранение транзакции" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.178;exitY=1.043;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.178;entryY=-0.075;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70.00000000000001" y="270.00000000000006" as="sourcePoint" />
+            <mxPoint x="70.00000000000001" y="342.92" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-86" value="Форма заполнена" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-85" vertex="1" connectable="0">
+          <mxGeometry x="-0.136" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-80" value="Ожидание заполнения полей формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-84" target="NAoeqm92_gp_XL33UbnM-87" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-89" value="[данные корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-88" vertex="1" connectable="0">
+          <mxGeometry x="-0.196" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-84" target="NAoeqm92_gp_XL33UbnM-80" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-92" value="[данные не корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-91" vertex="1" connectable="0">
+          <mxGeometry x="-0.384" relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-84" value="Проверка корректности введённый данных" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-87" target="NAoeqm92_gp_XL33UbnM-93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-95" value="Аккаунт создан, данные сохранены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-94" vertex="1" connectable="0">
+          <mxGeometry x="-0.174" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-87" value="Сохранение данных, создание аккаунта" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-93" target="NAoeqm92_gp_XL33UbnM-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="1030" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="100" y="1030" />
+              <mxPoint x="572" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-98" value="Открылась домашняя страница" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-97" vertex="1" connectable="0">
+          <mxGeometry x="-0.046" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-93" value="Переход на домашнюю страницу" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-106" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-99" target="NAoeqm92_gp_XL33UbnM-105" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-107" value="Открыта страница входа" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-106" vertex="1" connectable="0">
+          <mxGeometry x="-0.224" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-99" value="Открытие страницы входа в аккаунт" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-101" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.689;exitY=1.035;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-43" target="NAoeqm92_gp_XL33UbnM-99" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="630" y="230" as="sourcePoint" />
+            <mxPoint x="710" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-103" value="Выбран вариант войти в аккаунт" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-101" vertex="1" connectable="0">
+          <mxGeometry x="0.0228" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-109" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-105" target="NAoeqm92_gp_XL33UbnM-108" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-112" value="Выбран вариант&lt;div&gt;Забыли парль&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-109" vertex="1" connectable="0">
+          <mxGeometry x="-0.19" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-105" target="NAoeqm92_gp_XL33UbnM-110" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="320" />
+              <mxPoint x="910" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-113" value="&lt;div&gt;Заполнены&lt;/div&gt;&lt;div&gt;поля формы&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-111" vertex="1" connectable="0">
+          <mxGeometry x="-0.07" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-105" value="Ожидание заполнения полей формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-108" target="NAoeqm92_gp_XL33UbnM-122" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-124" value="Страница открыта" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-123" vertex="1" connectable="0">
+          <mxGeometry x="-0.108" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-108" value="Открытие страницы восстановления пароля" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-110" target="NAoeqm92_gp_XL33UbnM-105" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="360" />
+              <mxPoint x="910" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-115" value="[данные&lt;div&gt;не корректны]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-114" vertex="1" connectable="0">
+          <mxGeometry x="-0.0128" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-117" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-110" target="NAoeqm92_gp_XL33UbnM-116" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-118" value="[данные корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-117" vertex="1" connectable="0">
+          <mxGeometry x="-0.236" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-110" value="Проверка корректности введённых данных" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-120" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-116" target="NAoeqm92_gp_XL33UbnM-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1080" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1010" y="1060" />
+              <mxPoint x="628" y="1060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-121" value="Открылась домашняя страница" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-120" vertex="1" connectable="0">
+          <mxGeometry x="-0.0796" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-116" value="Вход в аккаунт, переход на домашнюю страницу" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-122" target="NAoeqm92_gp_XL33UbnM-125" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="520" />
+              <mxPoint x="520" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-130" value="Форма заполнена" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-126" vertex="1" connectable="0">
+          <mxGeometry x="-0.048" relative="1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-122" value="Ожидание заполнения формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-129" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-125" target="NAoeqm92_gp_XL33UbnM-122" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="500" />
+              <mxPoint x="570" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-132" value="[данные&lt;div&gt;не корректны]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-129" vertex="1" connectable="0">
+          <mxGeometry x="-0.336" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-136" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-125" target="NAoeqm92_gp_XL33UbnM-135" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-137" value="[данные корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-136" vertex="1" connectable="0">
+          <mxGeometry x="0.2576" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-125" value="Проверка корректности данных" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-139" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-135" target="NAoeqm92_gp_XL33UbnM-138" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-140" value="Код введён" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-139" vertex="1" connectable="0">
+          <mxGeometry x="-0.0491" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-135" value="Ожидание ввода кода подтверждения из email" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-142" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-138" target="NAoeqm92_gp_XL33UbnM-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-143" value="[код неверный]&lt;div&gt;Запрос на повторную отправку кода&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-142" vertex="1" connectable="0">
+          <mxGeometry x="-0.088" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-146" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-138" target="NAoeqm92_gp_XL33UbnM-145" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-147" value="[код верный]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-146" vertex="1" connectable="0">
+          <mxGeometry x="-0.128" y="-3" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-138" value="Проверка корректности кода" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-144" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-141" target="NAoeqm92_gp_XL33UbnM-135" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="560" />
+              <mxPoint x="650" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-141" value="Ожидание повторной отправки кода" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-149" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-145" target="NAoeqm92_gp_XL33UbnM-148" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="870" />
+              <mxPoint x="750" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-150" value="Форма&lt;div&gt;заполнена&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-149" vertex="1" connectable="0">
+          <mxGeometry x="0.068" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-145" value="Открытие формы для создания нового пароля" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-152" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-148" target="NAoeqm92_gp_XL33UbnM-151" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-153" value="Изменения сохранены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-152" vertex="1" connectable="0">
+          <mxGeometry x="0.4016" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-148" value="Ожидание сохранения изменений" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-156" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-151" target="NAoeqm92_gp_XL33UbnM-51" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="1090" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-157" value="Открылась домашняя страница" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-156" vertex="1" connectable="0">
+          <mxGeometry x="-0.1591" y="1" relative="1" as="geometry">
+            <mxPoint x="-26" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-151" value="Вход в аккаунт, переход на домашнюю страницу" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-179" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-162" target="NAoeqm92_gp_XL33UbnM-178" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-180" value="[Выбрана кнопка создания&amp;nbsp;&lt;div&gt;семейного счёта]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-179" vertex="1" connectable="0">
+          <mxGeometry x="-0.1803" y="-3" relative="1" as="geometry">
+            <mxPoint x="-11" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-162" value="Открытие страницы транзакций" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1108.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-172" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-168" target="NAoeqm92_gp_XL33UbnM-171" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-173" value="Поля заполнены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-172" vertex="1" connectable="0">
+          <mxGeometry x="0.0092" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-168" value="Ожидание заполнения полей формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="1280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-175" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-171" target="NAoeqm92_gp_XL33UbnM-75" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="930" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-177" value="Данные сохранены&lt;div&gt;Переход к странице создания&lt;/div&gt;&lt;div&gt;транзакции для данной категории&amp;nbsp;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-175" vertex="1" connectable="0">
+          <mxGeometry x="0.3082" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-171" value="Сохранение данных о новой категории" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="1380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-182" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NAoeqm92_gp_XL33UbnM-178" target="NAoeqm92_gp_XL33UbnM-181" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-183" value="Страница открылась" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-182" vertex="1" connectable="0">
+          <mxGeometry x="-0.3026" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-178" value="Открытие страницы создания семейного счёта" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1107" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-181" value="Ожидание заполнения формы" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-188" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.671;entryY=1.085;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-184" target="NAoeqm92_gp_XL33UbnM-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="1450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="545" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-189" value="Приглашения отправлены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-188" vertex="1" connectable="0">
+          <mxGeometry x="-0.0023" relative="1" as="geometry">
+            <mxPoint x="-27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-184" value="Ожидание ввода email для приглашения другим членам семьи подключить счёт" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="1400" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-194" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-181" target="NAoeqm92_gp_XL33UbnM-184" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="79.47" y="1347" as="sourcePoint" />
+            <mxPoint x="79.47" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-195" value="Форма заполнена" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-194" vertex="1" connectable="0">
+          <mxGeometry x="-0.3026" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-202" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="NAoeqm92_gp_XL33UbnM-51" target="NAoeqm92_gp_XL33UbnM-205" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="599.52" y="1220" as="sourcePoint" />
+            <mxPoint x="599.9999999999998" y="1538" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="1250" />
+              <mxPoint x="599" y="1250" />
+              <mxPoint x="599" y="1550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-210" value="Выбор страницы&lt;div&gt;аналитики&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-202" vertex="1" connectable="0">
+          <mxGeometry x="-0.3748" y="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-15" target="cou0TkOQtjYsmS7v7qx5-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="1560" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-20" value="Выбрана кнопка&lt;div&gt;выбора вида графика расходов&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-2">
+          <mxGeometry x="-0.1728" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NAoeqm92_gp_XL33UbnM-205" target="cou0TkOQtjYsmS7v7qx5-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-17" value="Страница аналитики открыта" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-16">
+          <mxGeometry x="-0.4667" y="1" relative="1" as="geometry">
+            <mxPoint x="-47" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-205" value="Открытие страницы аналитики бюджета" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="344" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-208" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="NAoeqm92_gp_XL33UbnM-209" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="1167" as="sourcePoint" />
+            <mxPoint x="690" y="1540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="1550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-211" value="Выбор страницы&lt;div&gt;планирования&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="NAoeqm92_gp_XL33UbnM-208" vertex="1" connectable="0">
+          <mxGeometry x="0.0508" y="4" relative="1" as="geometry">
+            <mxPoint x="21" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NAoeqm92_gp_XL33UbnM-209" target="cou0TkOQtjYsmS7v7qx5-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-21" value="Открыта страница&lt;div&gt;планирования бюджета&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-14">
+          <mxGeometry x="-0.3313" y="4" relative="1" as="geometry">
+            <mxPoint x="17" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NAoeqm92_gp_XL33UbnM-209" value="Открытие страницы планирования бюджета" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-1" target="cou0TkOQtjYsmS7v7qx5-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-6" value="[выбран график расходов&lt;div&gt;за день/месяц/год/по семейному счёту]&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-5">
+          <mxGeometry x="-0.2972" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-1" value="Ожидание выбора вида графика расходов из списка" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-45" y="1690" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-4" target="cou0TkOQtjYsmS7v7qx5-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-9" value="Данные получены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-8">
+          <mxGeometry x="-0.1583" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-4" value="Ожидание получения данных по выбранному периоду/счёту" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="1840" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-7" target="NAoeqm92_gp_XL33UbnM-205">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="1840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-12" value="График построен" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-11">
+          <mxGeometry x="-0.0997" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-7" value="Ожидание построения графика зависимости расходов (в рублях) от времени" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="339" y="1680" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-13" target="cou0TkOQtjYsmS7v7qx5-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-24" value="Выбор кнопки создания плана&lt;div&gt;для новой категории&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-23">
+          <mxGeometry x="-0.1622" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-13" value="Отображение планов по доходам и расходам на месяц,&lt;div&gt;сколько бюджета из запланированного по какой категории уже потрачено&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1500" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-15" value="Отображение графика расходов за текущий месяц,&lt;div&gt;&amp;nbsp;% бюджета, который уже потрачен,&lt;div&gt;какой % трат занимает каждая категория&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-90" y="1500" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-22" target="cou0TkOQtjYsmS7v7qx5-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-27" value="Форма открыта" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-26">
+          <mxGeometry x="-0.3139" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-22" value="Открытие формы для создания нового плана" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="1700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-25" target="cou0TkOQtjYsmS7v7qx5-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-30" value="Категория выбрана" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-29">
+          <mxGeometry x="0.025" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-25" value="Ожидание выбора категории, по которой задается план" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="1840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="1990" as="sourcePoint" />
+            <mxPoint x="845" y="1990" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="970" y="1990" />
+              <mxPoint x="970" y="1990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-33" value="Форма заполнена" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-32">
+          <mxGeometry x="0.0528" y="2" relative="1" as="geometry">
+            <mxPoint x="2" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-28" value="Ожидание заполнения формы" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="1980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-31" target="cou0TkOQtjYsmS7v7qx5-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-39" value="[Данные корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-35">
+          <mxGeometry x="-0.0806" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.714;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="2020" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1020" y="2020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-38" value="[данные не корректны]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-37">
+          <mxGeometry x="0.1444" y="-2" relative="1" as="geometry">
+            <mxPoint x="-10" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-31" value="Проверка корректности данных" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="715" y="1970" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cou0TkOQtjYsmS7v7qx5-34" target="NAoeqm92_gp_XL33UbnM-209">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="1730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-42" value="Данные сохранены" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cou0TkOQtjYsmS7v7qx5-41">
+          <mxGeometry x="-0.0184" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cou0TkOQtjYsmS7v7qx5-34" value="Сохранения нового плана, добавление плана категории на страницу планирования" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="705" y="1740" width="150" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
