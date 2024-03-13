@@ -4,7 +4,7 @@
 
 Выполняют студенты 5 группы:
 + [Жиляев Даниил Александрович](https://github.com/Luckypope) - Mobile developer
-+ [Соколов Александр Александрович](https://github.com/allexandrsokollov) - Team Lid, Backend developer
++ [Соколов Александр Александрович](https://github.com/allexandrsokollov) - Team Lead, Backend developer
 + [Волобуева Алина Александровна](https://github.com/Alina17500) - Бизнес-аналитик, Дизайнер
 
 ## Тема
