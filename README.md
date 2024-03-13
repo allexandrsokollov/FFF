@@ -30,4 +30,4 @@
 
 ## Видео
 
-Видео-презентация
+[Видео-презентация](https://youtu.be/NwhDKvurc10?si=kDngRjMOOcPJz1_e)
