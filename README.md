@@ -1,10 +1,10 @@
 # Приложение FFF (FamFinFit)
-## TP-5-12
+## TP-5-7
 Проект "Мобильное приложение для управления финансами и бюджетом семьи"
 
 Выполняют студенты 5 группы:
-+ [Жиляев Даниил Александрович](https://github.com/Luckypope) - Frontend developer
-+ [Соколов Александр Александрович](https://github.com/allexandrsokollov) - Backend developer
++ [Жиляев Даниил Александрович](https://github.com/Luckypope) - Mobile developer
++ [Соколов Александр Александрович](https://github.com/allexandrsokollov) - Team Lid, Backend developer
 + [Волобуева Алина Александровна](https://github.com/Alina17500) - Бизнес-аналитик, Дизайнер
 
 ## Тема
