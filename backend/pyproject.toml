@@ -1,0 +1,30 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.poetry]
+authors = ["Alex Sokolov <alek.a.sokolov@tinkoff.ru>"]
+description = ""
+name = "backend"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+alembic = "^1.13.1"
+autoflake = "^2.3.1"
+black = "^24.3.0"
+fastapi = "^0.110.0"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+make = "^0.1.6.post2"
+mypy = "^1.9.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+psycopg2-binary = "^2.9.9"
+pydantic-settings = "^2.2.1"
+pylint = "^3.1.0"
+python = "^3.12"
+python-jose = "^3.3.0"
+sqlalchemy = {extras = ["mypy"], version = "^2.0.29"}
+toml-sort = "^0.23.1"
+uvicorn = "^0.29.0"
+python-multipart = "^0.0.9"
