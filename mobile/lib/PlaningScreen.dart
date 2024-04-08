@@ -89,11 +89,20 @@ class PlaningScreenState extends State<PlaningScreen> {
                   ),
                   child: Column(
                     children: [
-                      Spacer(),
+                      // Здесь будут картинки
+                      // Container(
+                      //   width: 100,
+                      //   height: 30,
+                      //   decoration: const BoxDecoration(
+                      //     image: DecorationImage(
+                      //       image: NetworkImage('https://e7.pngegg.com/pngimages/865/934/png-clipart-decorative-box-kraft-paper-packaging-and-labeling-box-miscellaneous-cardboard.png')
+                      //     )
+                      //   ),
+                      // ),
                       const Align(
                         alignment: Alignment.topLeft,
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(15, 50, 0, 0),
+                          padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
                           child: Text("Экономьте больше денег", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                         ),
                       ),

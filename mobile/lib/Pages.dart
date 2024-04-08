@@ -1,3 +1,4 @@
+import 'package:app_planning_budget/LastTransactionScreen.dart';
 import 'package:app_planning_budget/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'ProfileScreen.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<Pages> {
   void initState() {
     _pages.add(const MainScreen());
     _pages.add(SettingScreen());
-    _pages.add(SettingScreen());
+    _pages.add(const LastTransaction());
     _pages.add(const PlaningScreen());
     _pages.add(const ProfileScreen());
     super.initState();
