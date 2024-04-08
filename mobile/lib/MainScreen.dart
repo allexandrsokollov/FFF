@@ -45,7 +45,8 @@ class MainScreenState extends State<MainScreen> {
       margin: const EdgeInsets.only(top: 5,left: 8,right: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color:Colors.orangeAccent[100],
+        border: Border.all(color: Color(0xff696969), width: 1),
+        color: Colors.white,
       ),
       child: Center(
         child: ListTile(
@@ -78,8 +79,8 @@ class MainScreenState extends State<MainScreen> {
                 height: 150,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Color(0xffA6BDD7),
-                    border: Border.all(width: 2, color: Color(0xffA6BDD7)),
+                    color: Color(0xffdbe6fb),
+                    border: Border.all(width: 2, color: Color(0xffdbe6fb)),
                     borderRadius: BorderRadius.circular(30)
                 ),
                 child: const Row(
@@ -90,16 +91,16 @@ class MainScreenState extends State<MainScreen> {
                         SizedBox(height: 10),
                         Padding(
                           padding: EdgeInsets.fromLTRB(15, 15, 0, 0),
-                          child: Text('Общие расходы', style: TextStyle(fontSize: 18, color: Colors.white)),
+                          child: Text('Общие расходы', style: TextStyle(fontSize: 18, color: Color(0xff330066))),
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(15, 2, 0, 0),
-                          child: Text('за день', style: TextStyle(fontSize: 18, color: Colors.white)),
+                          child: Text('за день', style: TextStyle(fontSize: 18, color: Color(0xff330066))),
                         ),
                         SizedBox(height: 10),
                         Padding(
                           padding: EdgeInsets.fromLTRB(15, 2, 0, 0),
-                          child: Text('4 123', style: TextStyle(fontSize: 30, color: Colors.white)),
+                          child: Text('4 123', style: TextStyle(fontSize: 30, color: Color(0xff330066))),
                         ),
                       ],
                     ),
@@ -110,16 +111,16 @@ class MainScreenState extends State<MainScreen> {
                         SizedBox(height: 10),
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 15, 15, 0),
-                          child: Text('Оставшийся', style: TextStyle(fontSize: 18, color: Colors.white)),
+                          child: Text('Оставшийся', style: TextStyle(fontSize: 18, color: Color(0xff330066))),
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 2, 15, 0),
-                          child: Text('баланс', style: TextStyle(fontSize: 18, color: Colors.white)),
+                          child: Text('баланс', style: TextStyle(fontSize: 18, color: Color(0xff330066))),
                         ),
                         SizedBox(height: 10),
                         Padding(
                           padding: EdgeInsets.fromLTRB(0, 2, 15, 0),
-                          child: Text('8 924', style: TextStyle(fontSize: 30, color: Colors.white)),
+                          child: Text('8 924', style: TextStyle(fontSize: 30, color: Color(0xff330066))),
                         ),
                       ],
                     )
