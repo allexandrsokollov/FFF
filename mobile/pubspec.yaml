@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_otp_text_field: ^1.1.0+2
+  intl: ^0.19.0
 
 
 

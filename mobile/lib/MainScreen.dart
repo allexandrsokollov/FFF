@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:intl/intl.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -12,14 +14,32 @@ class MainScreen extends StatefulWidget {
 
 class MainScreenState extends State<MainScreen> {
   List<Widget> transactions = [];
+  final TextEditingController sumController = TextEditingController();
+  final TextEditingController dateController = TextEditingController();
+  String selectedCategory = "Транспорт";
+
+  List<DropdownMenuItem<String>> categories = [
+    DropdownMenuItem(child: Text("Транспорт"), value: "Транспорт"),
+    DropdownMenuItem(child: Text('Рестораны'), value: "Рестораны")
+  ];
 
   void addTransaction() {
-    setState(() {
-      transactions.add(transaction());
-    });
+      setState(() {
+        transactions.add(transaction());
+      });
+
+      Navigator.pop(context);
+
+      //sumController.dispose();
   }
 
-  Widget transaction() {
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+    Widget transaction() {
+
     return Container(
       height: 80,
       margin: const EdgeInsets.only(top: 5,left: 8,right: 8),
@@ -35,50 +55,12 @@ class MainScreenState extends State<MainScreen> {
             child: CircleAvatar(
               radius:  26,
               backgroundImage:  NetworkImage(
-                  "https://i.pinimg.com/originals/71/83/70/7183704aac01413c86805c19c1586e2b.jpg"),
+                  "https://img2.freepng.ru/20180721/plg/kisspng-computer-icons-rss-web-feed-blog-for-inspiration-and-recognition-of-science-and-tec-5b532bd6a76a01.8609731515321773666857.jpg"),
             ),
           ),
-          title: const Text(
-            "Freedom Fighter",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700,color: Colors.deepPurple),
-          ),
-          subtitle: const Text(
-            'Freedom Fighter',
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: Colors.white),
-          ),
-          trailing: Card(
-            elevation: 1,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Container(
-                width: 50,
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('5',
-                        style: TextStyle(
-                            fontSize: 20, color: Colors.grey)),
-                    SizedBox(
-                      width: 1,
-                    ),
-                    Icon(
-                      Icons.access_alarms_outlined,
-                      textDirection: TextDirection.rtl,
-                      size: 20,
-                      color: Colors.grey,
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          title: Text(selectedCategory, style: TextStyle(fontSize: 20)),
+          subtitle: Text(dateController.text, style: TextStyle(fontSize: 12)),
+          trailing: Text(sumController.text + "₽", style: TextStyle(fontSize: 22)),
         ),
       ),
     );
@@ -87,33 +69,154 @@ class MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
-        ],
-      ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: ListView.builder(
-            itemCount: transactions.length,
-            itemBuilder: (context,index){
-              return transactions[index];
-            }),
+      body: Column(
+        children: [
+          Padding(
+              padding: EdgeInsets.all(20),
+            child: Container(
+                height: 150,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Color(0xffA6BDD7),
+                    border: Border.all(width: 2, color: Color(0xffA6BDD7)),
+                    borderRadius: BorderRadius.circular(30)
+                ),
+                child: const Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 10),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 15, 0, 0),
+                          child: Text('Общие расходы', style: TextStyle(fontSize: 18, color: Colors.white)),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 2, 0, 0),
+                          child: Text('за день', style: TextStyle(fontSize: 18, color: Colors.white)),
+                        ),
+                        SizedBox(height: 10),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(15, 2, 0, 0),
+                          child: Text('4 123', style: TextStyle(fontSize: 30, color: Colors.white)),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SizedBox(height: 10),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 15, 15, 0),
+                          child: Text('Оставшийся', style: TextStyle(fontSize: 18, color: Colors.white)),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 2, 15, 0),
+                          child: Text('баланс', style: TextStyle(fontSize: 18, color: Colors.white)),
+                        ),
+                        SizedBox(height: 10),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 2, 15, 0),
+                          child: Text('8 924', style: TextStyle(fontSize: 30, color: Colors.white)),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+            ),
+          ),
+          Row(
+            children: [
+              const Padding(padding: EdgeInsets.fromLTRB(10, 0, 0, 0), child: Text('Транзакции', style: TextStyle(color: Color(0xff330066), fontSize: 16))),
+              const Spacer(),
+              CircleAvatar(
+                backgroundColor: Color(0xff330066),
+                radius: 16,
+                child:  CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 14,
+                  child: AddTransactionDialog(context)
+                )
+              ),
+              const SizedBox(width: 10),
+              const Padding(padding: EdgeInsets.fromLTRB(0, 0, 10, 0), child: Text('Добавить', style: TextStyle(color: Color(0xff330066), fontSize: 16))),
+            ],
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: transactions.length,
+              itemBuilder: (context,index){
+                return transactions[index];
+              }),
+          )
+        ]),
+    );
+  }
+
+  Widget AddTransactionDialog(BuildContext context) {
+    return IconButton(
+      padding: EdgeInsets.zero,
+      onPressed: () => showDialog(
+          context: context,
+          builder: (context) {
+            return StatefulBuilder(
+                builder: (context, setState) {
+                  return AlertDialog(
+                    title: const Text("Добавить операцию"),
+                    content: Column(
+                      children: [
+                        DropdownButton(
+                            value: selectedCategory,
+                            items: categories,
+                            onChanged: (String? newValue) {
+                              setState((){
+                              selectedCategory = newValue!;
+                              });
+                            },
+                        ),
+                        TextField(
+                          decoration: const InputDecoration(hintText: 'Введите сумму'),
+                          controller: sumController,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: <TextInputFormatter>[
+                            FilteringTextInputFormatter.digitsOnly
+                          ],
+                        ),
+                        Center(
+                          child: TextField(
+                            readOnly: true,
+                            controller: dateController,
+                            decoration: const InputDecoration(hintText: 'Выберите дату'),
+                            onTap: () async {
+                              var date = await showDatePicker(
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime(1900),
+                                  lastDate: DateTime(2100));
+                              if (date != null) {
+                                dateController.text = DateFormat('dd MMMM yyyy').format(date);
+                              }
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    actions: <Widget>[
+                      TextButton(onPressed: addTransaction, child: const Text('Добавить')),
+                      TextButton(onPressed: () => Navigator.pop(context), child: const Text('Отмена'))
+                    ],
+                  );
+                }
+            );
+          }
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addTransaction,
-        tooltip: 'Add',
-        child: const Icon(Icons.add),
-      ),
-      bottomNavigationBar: BottomNavigationBar (
-        items: const [
-          BottomNavigationBarItem(label: 'Домой',icon: Icon(Icons.home_sharp, color: Color(0xff330066))),
-          BottomNavigationBarItem(label: 'Аналитика', icon: Icon(Icons.incomplete_circle_outlined, color: Color(0xff330066))),
-          BottomNavigationBarItem(label: 'Последние транзакции', icon: Icon(Icons.compare_arrows,  color: Color(0xff330066))),
-          BottomNavigationBarItem(label: 'Планирование бюджета', icon: Icon(Icons.trending_up,  color: Color(0xff330066))),
-          BottomNavigationBarItem(label: 'Профиль', icon: Icon(Icons.person,  color: Color(0xff330066)))
-        ],
-        ),
+      icon: const Icon(Icons.add),
+
     );
   }
 }
+
+
+

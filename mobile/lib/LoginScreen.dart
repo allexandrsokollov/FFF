@@ -1,4 +1,5 @@
 import 'package:app_planning_budget/MainScreen.dart';
+import 'package:app_planning_budget/Pages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -141,7 +142,7 @@ class _PasswordFieldState extends State<PasswordField> {
 }
 
 void goToTheMainScreen(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Pages()));
 }
 
 class LoginButton extends StatelessWidget {

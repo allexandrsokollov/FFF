@@ -63,28 +63,6 @@ class PasswordRecoveryScreen extends StatelessWidget {
   }
 }
 
-// class MailField extends StatelessWidget {
-//   final String text;
-//
-//   MailField({required this.text});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//         margin: const EdgeInsets.all(7),
-//         child: TextField(
-//             style: const TextStyle(
-//                 fontSize: 18, color: Colors.black, height: 0.001),
-//             decoration: InputDecoration(
-//                 hintText: text,
-//                 hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
-//                 counterText: "",
-//                 border: OutlineInputBorder(
-//                   borderRadius: BorderRadius.circular(8.0),
-//                 ))));
-//   }
-// }
-
 void goToTheEnterEmailCode(BuildContext context) {
   if (email != null) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => EnterEmailCodeScreen(email)));
@@ -92,12 +70,6 @@ void goToTheEnterEmailCode(BuildContext context) {
 }
 
 class SendCodeButton extends StatelessWidget {
-  // var email;
-
-  // SendCodeButton(String curEmail) {
-  //   email = curEmail;
-  // }
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
