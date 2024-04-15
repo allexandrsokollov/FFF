@@ -1,11 +1,9 @@
 from pydantic import Field
-from pydantic_settings import SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.engine.url import make_url
 
-from backend.settings.base import Settings
 
-
-class PostgresSettings(Settings):
+class PostgresSettings(BaseSettings):
     user: str = Field(..., description="postgres username")
     password: str = Field(..., description="postgres pass")
     db: str = Field(..., description="database name")
@@ -25,7 +23,12 @@ class PostgresSettings(Settings):
         )
         return url.__to_string__(hide_password=False)
 
-    model_config = SettingsConfigDict(env_prefix="postgres_")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        env_prefix="postgres_",
+        extra="ignore",
+    )
 
 
 postgres_settings = PostgresSettings()

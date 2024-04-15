@@ -1,12 +1,12 @@
 import uuid
-from typing import Any, Optional
+from typing import Any, Optional, TypeVar
 
 from sqlalchemy import UUID, Column, DateTime, MetaData, create_engine
 from sqlalchemy.engine import Engine
-from sqlalchemy.orm import as_declarative, declared_attr, sessionmaker
+from sqlalchemy.orm import declarative_base, declared_attr, sessionmaker
 
 from backend.settings.database import postgres_settings
-from utils.utils import now_utc
+from utils.utils import now_utc, to_snake
 
 
 DRIVER_NAME = "postgresql"
@@ -28,8 +28,10 @@ metadata = MetaData(
 )
 
 
-@as_declarative(metadata=metadata)
-class Base:
+DeclarativeBase = declarative_base(metadata=metadata)
+
+
+class Base(DeclarativeBase):
     def __init__(self, *args: Any, **kwargs: Any):
         """Заглушка для проблем с mypy call-arg"""
         super().__init__(*args, **kwargs)  # pragma: no cover
@@ -48,3 +50,6 @@ class Base:
     ) -> str:  # pragma: no cover
         """Имя таблицы по-умолчанию, если не указано другое"""
         return to_snake(cls.__name__)  # type: ignore  # pylint: disable=no-member
+
+
+BaseModelClass = TypeVar("BaseModelClass", bound=Base)
