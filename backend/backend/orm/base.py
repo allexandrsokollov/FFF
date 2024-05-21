@@ -1,55 +1,49 @@
 import uuid
-from typing import Any, Optional, TypeVar
+from datetime import datetime
+from typing import TypeVar
+import re
 
-from sqlalchemy import UUID, Column, DateTime, MetaData, create_engine
-from sqlalchemy.engine import Engine
-from sqlalchemy.orm import declarative_base, declared_attr, sessionmaker
+from sqlalchemy import MetaData, create_engine
+from sqlalchemy.orm import (
+    Mapped,
+    as_declarative,
+    declared_attr,
+    mapped_column,
+    sessionmaker,
+)
 
 from backend.settings.database import postgres_settings
-from utils.utils import now_utc, to_snake
 
 
 DRIVER_NAME = "postgresql"
-
-
-def make_session_factory(
-    database_url: str = postgres_settings.full_url(),
-    engine: Optional[Engine] = None,
-) -> sessionmaker:  # type: ignore [type-arg]
-    engine = engine or create_engine(
-        database_url,
-    )
-
-    return sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-
-metadata = MetaData(
-    schema=postgres_settings.schema,
+session_factory = sessionmaker(  # type: ignore[call-overload]
+    autoflush=False,
+    autocommit=False,
+    bind=create_engine(postgres_settings.full_url()),
 )
 
+metadata = MetaData()
 
-DeclarativeBase = declarative_base(metadata=metadata)
 
+@as_declarative(metadata=metadata)
+class Base:
 
-class Base(DeclarativeBase):
-    def __init__(self, *args: Any, **kwargs: Any):
-        """Заглушка для проблем с mypy call-arg"""
-        super().__init__(*args, **kwargs)  # pragma: no cover
+    @declared_attr  # type: ignore[arg-type]
+    def __tablename__(cls) -> str:  # noqa: N805
+        # CamelCase to snake_case
+        return re.sub(r"(?<!^)(?=[A-Z])", "_", cls.__name__).lower()  # type: ignore[attr-defined]
 
-    id = Column(UUID, primary_key=True, default=lambda: str(uuid.uuid4()))
-    created_at = Column(DateTime(timezone=True), index=True, default=now_utc)
-    updated_at = Column(DateTime(timezone=True), onupdate=now_utc, default=now_utc)
-    deleted_at = Column(
-        DateTime(timezone=True), index=True, default=None, nullable=True
+    id: Mapped[uuid.UUID] = mapped_column(
+        primary_key=True,
+        default=lambda: str(uuid.uuid4()),
     )
-
-    # noinspection PyMethodParameters
-    @declared_attr
-    def __tablename__(  # pylint: disable=no-self-argument
-        cls,  # noqa:N805
-    ) -> str:  # pragma: no cover
-        """Имя таблицы по-умолчанию, если не указано другое"""
-        return to_snake(cls.__name__)  # type: ignore  # pylint: disable=no-member
+    created_at: Mapped[datetime] = mapped_column(
+        default=datetime.now,
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        onupdate=datetime.now,
+        default=datetime.now,
+    )
 
 
 BaseModelClass = TypeVar("BaseModelClass", bound=Base)

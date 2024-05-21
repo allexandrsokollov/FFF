@@ -1,10 +1,14 @@
 from logging.config import fileConfig
 
-from sqlalchemy import engine_from_config, pool
+from sqlalchemy import engine_from_config, pool, Engine, create_engine
 
 from alembic import context
+from sqlalchemy.engine import Connectable
+
 from backend.orm.base import Base
 from backend.settings.database import postgres_settings
+
+from backend.authentication.orm.models import User
 
 
 # this is the Alembic Config object, which provides
@@ -28,7 +32,7 @@ target_metadata = Base.metadata
 # ... etc.
 
 
-def run_migrations_offline() -> None:
+def run_migrations_offline():  # pragma: no cover
     """Run migrations in 'offline' mode.
 
     This configures the context with just a URL
@@ -52,6 +56,15 @@ def run_migrations_offline() -> None:
         context.run_migrations()
 
 
+def do_run_migrations(connection: Connectable) -> None:
+    context.configure(
+        connection=connection,
+        target_metadata=target_metadata,
+    )
+
+    with context.begin_transaction():
+        context.run_migrations()
+
 def run_migrations_online() -> None:
     """Run migrations in 'online' mode.
 
@@ -60,18 +73,9 @@ def run_migrations_online() -> None:
 
     """
 
-    connectable = engine_from_config(
-        config.get_section(config.config_ini_section, {}),
-        url=postgres_settings.full_url(),
-        prefix="sqlalchemy.",
-        poolclass=pool.NullPool,
-    )
-
-    with connectable.connect() as connection:
-        context.configure(connection=connection, target_metadata=target_metadata)
-
-        with context.begin_transaction():
-            context.run_migrations()
+    engine: Engine = create_engine(postgres_settings.full_url(), echo=True)
+    with engine.connect() as connection:
+        do_run_migrations(connection)
 
 
 if context.is_offline_mode():
