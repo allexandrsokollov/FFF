@@ -1,4 +1,6 @@
-from pydantic import BaseModel, EmailStr, field_validator
+from uuid import UUID
+
+from pydantic import BaseModel, EmailStr, field_validator, ConfigDict
 from pydantic_core import ValidationError
 
 
@@ -9,6 +11,7 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     username: str | None = None
+    id: UUID
 
 
 class UserCreate(BaseModel):
@@ -42,9 +45,13 @@ class UserUpdate(BaseModel):
 
 
 class UserOut(BaseModel):
+    id: UUID
     username: str
     email: EmailStr
     is_admin: bool
+    password: str
+
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
 
 
 class UserWithPass(UserOut):

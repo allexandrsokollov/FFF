@@ -1,27 +1,35 @@
-from backend.authentication.services.models import User
+from uuid import UUID
+
+from sqlalchemy.orm import Session
+
+from backend.authentication.api.models import UserCreate, UserOut, UserUpdate
+from backend.authentication.orm.repository import UserRepo
 
 
-fake_users_db = {
-    "johndoe": {
-        "username": "johndoe",
-        "email": "johndoe@example.com",
-        "password": "$2b$12$CLuGaFDcI6sed2mPnVfLgeIUTG29WeZbZRtwLDnRN5kllABxg/6XG",
-        "is_admin": False,
-        "is_active": True,
-    },
-    "alice": {
-        "username": "alice",
-        "email": "alice@example.com",
-        "password": "$2b$12$CLuGaFDcI6sed2mPnVfLgeIUTG29WeZbZRtwLDnRN5kllABxg/6XG",
-        "is_admin": True,
-        "is_active": True,
-    },
-}
+def get_user(username: str, session: Session) -> UserOut:
+    repo = UserRepo(session)
+    user = repo.get_by_username(username, with_for_update=False)
+
+    return UserOut.from_orm(user)
 
 
-def get_user(username: str):
-    if username in fake_users_db:
-        user_dict = fake_users_db[username]
-        return User(**user_dict)
-    else:
-        raise Exception
+def create_user(user: UserCreate, session: Session) -> UserOut:
+    repo = UserRepo(session)
+
+    from backend.authentication.services.sec import get_password_hash
+    user.password = get_password_hash(user.password)
+    user_data = repo.create(user)
+
+    return UserOut.from_orm(user_data)
+
+
+def delete_user(user_id: UUID, session: Session) -> None:
+    repo = UserRepo(session)
+    repo.delete(user_id)
+
+
+def update_user(user_id: UUID, user: UserUpdate, session: Session) -> UserOut:
+    repo = UserRepo(session)
+    user_data = repo.update(user_id, user)
+
+    return UserOut.from_orm(user_data)
