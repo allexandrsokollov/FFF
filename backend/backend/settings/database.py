@@ -7,7 +7,6 @@ class PostgresSettings(BaseSettings):
     user: str = Field(..., description="postgres username")
     password: str = Field(..., description="postgres pass")
     db: str = Field(..., description="database name")
-    schema: str = Field(..., description="postgres schema")  # type: ignore[assignment]
     url: str = Field(..., description="postgres url")
 
     def full_url(self) -> str:
