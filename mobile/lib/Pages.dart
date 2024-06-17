@@ -1,6 +1,7 @@
 import 'package:app_planning_budget/AnalyticsScreen.dart';
 import 'package:app_planning_budget/LastTransactionScreen.dart';
 import 'package:app_planning_budget/MainScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'ProfileScreen.dart';
 import 'PlaningScreen.dart';
@@ -19,14 +20,22 @@ class _HomePageState extends State<Pages> {
     _pages.add(const AnalyticsScreen());
     _pages.add(const LastTransaction());
     _pages.add(const PlaningScreen());
-    _pages.add(const ProfileScreen());
+    _pages.add(ProfileScreen());
     super.initState();
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('FFF'),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image(
+                  image: AssetImage('assets/Logo.png'),
+                  height: AppBar().preferredSize.height,
+              )
+            ],
+          ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.notifications))
         ],

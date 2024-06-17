@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_swiper_view/flutter_swiper_view.dart';
 
 class AnalyticsScreen extends StatefulWidget {
   const AnalyticsScreen({super.key});
@@ -68,10 +67,12 @@ class AnalyticsScreenState extends State<AnalyticsScreen> {
             legend: Legend(isVisible: true),
             tooltipBehavior: TooltipBehavior(enable: true),
             series: <CartesianSeries<TransactionData, String>> [
-              LineSeries<TransactionData, String>(
+              SplineSeries<TransactionData, String>(
+              // LineSeries<TransactionData, String>(
                 dataSource: <TransactionData>[
                   TransactionData('Март', 10232),
                   TransactionData('Апрель', 93160),
+                  TransactionData('Июнь', 45300),
                 ],
                 xValueMapper: (TransactionData sum, _) => sum.month,
                 yValueMapper: (TransactionData sum, _) => sum.sum,
@@ -86,8 +87,8 @@ class AnalyticsScreenState extends State<AnalyticsScreen> {
             margin: const EdgeInsets.only(top: 5,left: 8,right: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Color(0xff909090), width: 1),
-              color: Color(0xff909090),
+              border: Border.all(color: Color(0xff718096), width: 1),
+              color: Color(0xff718096),
             ),
             child: const ListTile(
               title: Text("Бюджет на апрель", style: TextStyle(fontSize: 18, color: Colors.white)),
@@ -95,7 +96,6 @@ class AnalyticsScreenState extends State<AnalyticsScreen> {
                 backgroundColor: Color(0xffD0D0D0),
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                 value: 93160 / 102320,
-
               ),
               trailing: Text("102320", style: TextStyle(fontSize: 20, color: Colors.white)),
             ),

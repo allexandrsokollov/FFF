@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -7,6 +8,15 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
+
+int plannedMonthlyExpenditure = 0;
+List<Widget> planingCategories = [];
+int curSum = Random().nextInt(2000);
+List<DropdownMenuItem<String>> categories = [
+  const DropdownMenuItem(child: Text("Транспорт"), value: "Транспорт"),
+  const DropdownMenuItem(child: Text('Рестораны'), value: "Рестораны"),
+];
+
 class PlaningScreen extends StatefulWidget {
   const PlaningScreen({super.key});
 
@@ -15,20 +25,35 @@ class PlaningScreen extends StatefulWidget {
 }
 
 class PlaningScreenState extends State<PlaningScreen> {
-  List<Widget> planingCategories = [];
   final TextEditingController sumController = TextEditingController();
+  final TextEditingController categoryController = TextEditingController();
   String selectedCategory = "Транспорт";
 
-  List<DropdownMenuItem<String>> categories = [
-    const DropdownMenuItem(child: Text("Транспорт"), value: "Транспорт"),
-    const DropdownMenuItem(child: Text('Рестораны'), value: "Рестораны")
-  ];
+  @override
+  void initState() {
+    categories.add(DropdownMenuItem(value: "Добавить",child: AddCategoryDialog(context)));
+  }
+
+  void changeCategoryPosition() {
+    categories.add(DropdownMenuItem(value: "Добавить",child: AddCategoryDialog(context)));
+    categories[categories.length - 2] = DropdownMenuItem(child: Text(categoryController.text), value: categoryController.text);
+  }
+  void addCategory() {
+    setState(() {
+      changeCategoryPosition();
+    });
+
+    categoryController.clear();
+    Navigator.pop(context);
+  }
 
   void addTransaction() {
     setState(() {
       planingCategories.add(transaction());
+      plannedMonthlyExpenditure += int.parse(sumController.text);
     });
 
+    sumController.clear();
     Navigator.pop(context);
   }
 
@@ -42,30 +67,16 @@ class PlaningScreenState extends State<PlaningScreen> {
     return Container(
       height: 80,
       margin: const EdgeInsets.only(top: 5,left: 8,right: 8),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Color(0xff696969), width: 1),
-        color: Colors.white,
-      ),
       child: Center(
         child: ListTile(
-          leading: const CircleAvatar(
-            radius : 28 ,
-            backgroundColor:  Colors.white ,
-            child: CircleAvatar(
-              radius:  26,
-              backgroundImage:  NetworkImage(
-                  "https://img2.freepng.ru/20180721/plg/kisspng-computer-icons-rss-web-feed-blog-for-inspiration-and-recognition-of-science-and-tec-5b532bd6a76a01.8609731515321773666857.jpg"),
-            ),
-          ),
-          title: Text(selectedCategory, style: const TextStyle(fontSize: 18)),
+          title: Text(selectedCategory, style: const TextStyle(fontSize: 14)),
           subtitle: LinearProgressIndicator(
             backgroundColor: const Color(0xffD0D0D0),
             valueColor: const AlwaysStoppedAnimation<Color>(Color(0xff29AB87)),
-            value: 1032 / int.parse(sumController.text),
+            value: curSum / int.parse(sumController.text),
 
           ),
-          trailing: Text("1 032/${sumController.text}", style: TextStyle(fontSize: 20)),
+          trailing: Text(curSum.toString() + "/${sumController.text}", style: TextStyle(fontSize: 14)),
         ),
       ),
     );
@@ -83,33 +94,43 @@ class PlaningScreenState extends State<PlaningScreen> {
                   height: 250,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      color: Color(0xffdbe6fb),
-                      border: Border.all(width: 2, color: Color(0xffdbe6fb)),
+                      color: Color(0xffedf0f7),
+                      border: Border.all(width: 2, color: Color(0xffedf0f7)),
                       borderRadius: BorderRadius.circular(30)
                   ),
                   child: Column(
                     children: [
-                      // Здесь будут картинки
-                      // Container(
-                      //   width: 100,
-                      //   height: 30,
-                      //   decoration: const BoxDecoration(
-                      //     image: DecorationImage(
-                      //       image: NetworkImage('https://e7.pngegg.com/pngimages/865/934/png-clipart-decorative-box-kraft-paper-packaging-and-labeling-box-miscellaneous-cardboard.png')
-                      //     )
-                      //   ),
-                      // ),
+                      Stack(
+                        alignment: Alignment.topLeft,
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                child: ClipRect(
+                                  child: Image.asset('assets/boxes.png', width: 110, height: 62, alignment: Alignment.topLeft),
+                                ),
+                              ),
+                              Spacer(),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                                child: Image.asset('assets/flower.png', width: 100, height: 62, alignment: Alignment.topLeft),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                       const Align(
                         alignment: Alignment.topLeft,
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
+                          padding: EdgeInsets.fromLTRB(25, 5, 0, 0),
                           child: Text("Экономьте больше денег", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                         ),
                       ),
                       const Align(
                         alignment: Alignment.topLeft,
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(15, 5, 0, 0),
+                          padding: EdgeInsets.fromLTRB(25, 5, 0, 0),
                           child: Text("Улучшите план для большой экономии", style: TextStyle(fontSize: 14, color: Color(0xff696969))),
                         ),
                       ),
@@ -126,20 +147,20 @@ class PlaningScreenState extends State<PlaningScreen> {
                           ),
                           child:  Row(
                             children: [
-                              const Column(
+                              Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                                     child: Text('Ваш план расходов', style: TextStyle(color: Color(0xff696969))),
                                   ),
-                                  SizedBox(height: 15),
+                                  const SizedBox(height: 15),
                                   Padding(
                                       padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                                       child: Row(
                                         children: [
-                                          Text('40 000', style: TextStyle(fontSize: 22, color: Color(0xff696969))),
-                                          Text('   /месяц', style: TextStyle(color: Color(0xff696969)))
+                                          Text(plannedMonthlyExpenditure.toString(), style: TextStyle(fontSize: 22, color: Color(0xff696969), fontWeight: FontWeight.bold)),
+                                          const Text('   /месяц', style: TextStyle(color: Color(0xff696969)))
                                         ],
                                       )
                                   )
@@ -152,7 +173,7 @@ class PlaningScreenState extends State<PlaningScreen> {
                                   Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 30, 65, 0),
                                     child:                                   CircleAvatar(
-                                        backgroundColor: Color(0xff330066),
+                                        backgroundColor: Color(0xff5464c9),
                                         radius: 16,
                                         child:  CircleAvatar(
                                             backgroundColor: Colors.white,
@@ -179,25 +200,59 @@ class PlaningScreenState extends State<PlaningScreen> {
                   )
               ),
             ),
-            const Row(
-              children: [
-                Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Text('Куда уходят ваши деньги?',
-                        style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold
-                        )
-                    )
-                ),
-              ],
-            ),
             Expanded(
-              child: ListView.builder(
-                  itemCount: planingCategories.length,
-                  itemBuilder: (context,index){
-                    return planingCategories[index];
-                  }),
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0xfff6f7f9),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(10),
+                  topLeft: Radius.circular(10)
+                )
+              ),
+              child: Column(
+                children: [
+                  const Row(
+                    children: [
+                      Padding(
+                          padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                          child: Text('Куда уходят ваши деньги?',
+                              style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold
+                              )
+                          )
+                      ),
+                    ],
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                        itemCount: planingCategories.length,
+                        itemBuilder: (context,index){
+                          return planingCategories[index];
+                        }),
+                  )
+                ],
+              ),
             )
-          ]),
+            )
+            // const Row(
+            //   children: [
+            //     Padding(
+            //         padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+            //         child: Text('Куда уходят ваши деньги?',
+            //             style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold
+            //             )
+            //         )
+            //     ),
+            //   ],
+            // ),
+            // Expanded(
+            //   child: ListView.builder(
+            //       itemCount: planingCategories.length,
+            //       itemBuilder: (context,index){
+            //         return planingCategories[index];
+            //       }),
+            // )
+          ]
+      ),
     );
   }
 
@@ -223,7 +278,7 @@ class PlaningScreenState extends State<PlaningScreen> {
                           },
                         ),
                         TextField(
-                          decoration: const InputDecoration(hintText: 'Планирумая сумма'),
+                          decoration: const InputDecoration(hintText: 'Планируeмая сумма'),
                           controller: sumController,
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
@@ -241,11 +296,36 @@ class PlaningScreenState extends State<PlaningScreen> {
             );
           }
       ),
-      icon: const Icon(Icons.add),
+      icon: const Icon(Icons.add, color: Color(0xff5464c9),),
 
     );
   }
+
+  Widget AddCategoryDialog(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => showDialog(
+          context: context,
+          builder: (context) {
+            return StatefulBuilder(builder: (context, setState) {
+              return AlertDialog(
+                title: const Text("Добавить категорию"),
+                content:
+                    TextField(
+                      decoration:
+                      const InputDecoration(hintText: 'Введите название'),
+                      controller: categoryController,
+
+                    ),
+                actions: <Widget>[
+                  TextButton(
+                      onPressed: addCategory, child: const Text('Добавить')),
+                  TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text('Отмена'))
+                ],
+              );
+            });
+          }), child: Text("Добавить"),
+    );
+  }
 }
-
-
-

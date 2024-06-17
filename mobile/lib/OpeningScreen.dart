@@ -6,8 +6,9 @@ import 'LoginScreen.dart';
 class OpeningScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Colors.white,
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body:SingleChildScrollView(
         child:
             Column(
               children: [
@@ -21,7 +22,8 @@ class OpeningScreen extends StatelessWidget {
                 LogButtons(onPressed: () => goToTheRegistration(context), text: 'Создать аккаунт', isRegistration: true),
               ]
             )
-        );
+        )
+    );
   }
 }
 
