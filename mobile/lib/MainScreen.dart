@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -22,8 +21,8 @@ bool firstOpen = true;
 void fillAccountsName() {
   List<String> resList = [];
   accountsName.clear();
-  for (CardContainer ac in accounts) {
-    resList.add(ac.accountName);
+  for (int i = 0; i < accounts.length - 1; i++) {
+    resList.add(accounts[i].accountName);
   }
 
   for (String str in resList) {
@@ -271,14 +270,6 @@ class MainScreenState extends State<MainScreen> {
                       inputFormatters: <TextInputFormatter>[
                         FilteringTextInputFormatter.digitsOnly
                       ],
-                    ),TextField(
-                      decoration:
-                          const InputDecoration(hintText: 'Введите сумму'),
-                      controller: sumController,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: <TextInputFormatter>[
-                        FilteringTextInputFormatter.digitsOnly
-                      ],
                     ),
                     Center(
                       child: TextField(
@@ -317,7 +308,7 @@ class MainScreenState extends State<MainScreen> {
 }
 
 String convertDate(String inputDate) {
-  DateFormat inputFormat = DateFormat('dd MMM yyyy');
+  DateFormat inputFormat = DateFormat('dd MMMM yyyy');
   DateTime dateTime = inputFormat.parse(inputDate);
   DateFormat outputFormat = DateFormat('yyyyMMdd');
   String outputDate = outputFormat.format(dateTime);

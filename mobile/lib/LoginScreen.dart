@@ -1,5 +1,6 @@
 import 'package:app_planning_budget/MainScreen.dart';
 import 'package:app_planning_budget/Pages.dart';
+import 'package:app_planning_budget/ProfileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -8,8 +9,15 @@ import 'PasswordRecoveryScreen.dart';
 
 import 'RegistrarionScreen.dart';
 
-class LoginScreen extends StatelessWidget {
 
+String correctPassword = "TarasovBich";
+final TextEditingController passwordController = TextEditingController();
+
+bool checkPassword(String password) {
+  return correctPassword == password;
+}
+
+class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +101,7 @@ class LoginField extends StatelessWidget {
 class PasswordField extends StatefulWidget {
   final String text;
 
-  const PasswordField({super.key, required this.text, passwordVisible=true });
+  const PasswordField({super.key, required this.text, passwordVisible=true});
 
   @override
   State<PasswordField> createState() => _PasswordFieldState();
@@ -115,6 +123,7 @@ class _PasswordFieldState extends State<PasswordField> {
         child: TextField(
             style: const TextStyle(fontSize: 18, color: Colors.black, height: 0.001),
             obscureText: passwordVisible,
+            controller: passwordController,
             decoration: InputDecoration(
                 hintText: widget.text,
                 hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
@@ -130,7 +139,6 @@ class _PasswordFieldState extends State<PasswordField> {
                     );
                   },
                 ),
-
                 counterText: "",
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
@@ -154,7 +162,11 @@ class LoginButton extends StatelessWidget {
         margin: const EdgeInsets.all(8),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(backgroundColor: Color(0xff330066)),
-          onPressed: () => goToTheMainScreen(context),
+          onPressed: () {
+            if (checkPassword(passwordController.text)) {
+              goToTheMainScreen(context);
+            }
+          },
           child: const Text('Войти', style: TextStyle(color: Colors.white, fontSize: 18),
           ),
         ),
