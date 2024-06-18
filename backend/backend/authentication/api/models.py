@@ -54,5 +54,11 @@ class UserOut(BaseModel):
     model_config = ConfigDict(from_attributes=True, extra='ignore')
 
 
+class PassCode(BaseModel):
+    code: str
+
+class UpdatePassword(PassCode):
+    password: str
+
 class UserWithPass(UserOut):
     password: str

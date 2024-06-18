@@ -30,4 +30,18 @@ class PostgresSettings(BaseSettings):
     )
 
 
+class RedisStorageSettings(BaseSettings):
+    url: str
+    master_name: str | None = None
+    socket_timeout: float = 5.0
+    ttl: int = 300
+
+    class Config:
+        env_prefix = "redis_"
+        env_file_encoding = "utf8"
+        env_file = ".env"
+        extra = "ignore"
+
+
+redis_settings = RedisStorageSettings()
 postgres_settings = PostgresSettings()
