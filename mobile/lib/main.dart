@@ -1,19 +1,15 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'OpeningScreen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'firebase_options.dart';
+import 'package:appmetrica_plugin/appmetrica_plugin.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+AppMetricaConfig get _config => const AppMetricaConfig('c99878bb-5390-4f8e-8ad0-82b9b97cd60c', logs: true);
+
+void main() {
+  AppMetrica.activate(_config);
   runApp(MainPages());
 }
 
-// Возможно, здесь потом будет проверка на авторизованного пользователя и в зависимости
-// от этого будет открываться начальный экран либо регистрация, либо уже стартовая страница
 class MainPages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

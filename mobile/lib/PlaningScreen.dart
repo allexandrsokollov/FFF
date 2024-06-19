@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:appmetrica_plugin/appmetrica_plugin.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
+AppMetricaConfig get _config => const AppMetricaConfig('c99878bb-5390-4f8e-8ad0-82b9b97cd60c', logs: true);
 
 int plannedMonthlyExpenditure = 0;
 List<Widget> planingCategories = [];
@@ -31,6 +33,8 @@ class PlaningScreenState extends State<PlaningScreen> {
 
   @override
   void initState() {
+    AppMetrica.activate(_config);
+    AppMetrica.reportEvent('Use app');
     categories.add(DropdownMenuItem(value: "Добавить",child: AddCategoryDialog(context)));
   }
 

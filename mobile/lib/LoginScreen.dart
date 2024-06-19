@@ -1,6 +1,4 @@
-import 'package:app_planning_budget/MainScreen.dart';
 import 'package:app_planning_budget/Pages.dart';
-import 'package:app_planning_budget/ProfileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -10,7 +8,7 @@ import 'PasswordRecoveryScreen.dart';
 import 'RegistrarionScreen.dart';
 
 
-String correctPassword = "TarasovBich";
+String correctPassword = "";
 final TextEditingController passwordController = TextEditingController();
 
 bool checkPassword(String password) {

@@ -17,8 +17,6 @@ String email = "helloworld2002@gmail.com";
 String password = "testadmin2007";
 File? _image;
 
-final FirebaseAnalytics analytics =  FirebaseAnalytics.instance;
-
 class ProfileScreen extends StatefulWidget {
   @override
   ProfileScreenState createState() => ProfileScreenState();
@@ -31,7 +29,7 @@ class ProfileScreenState extends State<ProfileScreen> {
 
   @override
   void initState() {
-    analytics.setAnalyticsCollectionEnabled(true);
+
   }
   @override
   Widget build(BuildContext context) {
@@ -187,14 +185,6 @@ class _PasswordFieldState extends State<PasswordField> {
     return Container(
         margin: const EdgeInsets.all(7),
         child: TextField(
-          onTap: () async {
-            await analytics.logEvent(
-                name: 'pages_tracked',
-              parameters: {
-                  "page_name": "Profile"
-              }
-            );
-          },
           controller: textContorller,
           enabled: widget.isPasswordEnable,
             style: const TextStyle(fontSize: 18, color: Colors.black, height: 0.001),

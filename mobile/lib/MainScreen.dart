@@ -58,14 +58,20 @@ class MainScreenState extends State<MainScreen> {
           account: selectedAccount,
           callback: editTransaction));
     }
-    transactions.sort((a, b) => a.date.compareTo(b.date));
+    transactions.sort((a, b) {
+      return -DateTime.parse(convertDate(a.date)).compareTo(DateTime.parse(convertDate(b.date)));
+    });
+
     firstOpen = false;
   }
 
   void addTransaction() {
     setState(() {
       transactions.add(Transaction(id: id, categoryName: selectedCategory, sum: double.parse(sumController.text), date: dateController.text, account: selectedAccount, callback: editTransaction));
-      // transactions.sort((a, b) => a.date.compareTo(b.date));
+
+      transactions.sort((a, b) {
+        return -DateTime.parse(convertDate(a.date)).compareTo(DateTime.parse(convertDate(b.date)));
+      });
     });
 
     selectedCategory = "Транспорт";

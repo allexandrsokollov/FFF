@@ -1,11 +1,15 @@
 import 'package:app_planning_budget/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'RegistrarionScreen.dart';
-import 'LoginScreen.dart';
+import 'package:appmetrica_plugin/appmetrica_plugin.dart';
+
+AppMetricaConfig get _config => const AppMetricaConfig('c99878bb-5390-4f8e-8ad0-82b9b97cd60c', logs: true);
 
 class OpeningScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    AppMetrica.activate(_config);
+    AppMetrica.reportEvent('Open app');
     return Scaffold(
         backgroundColor: Colors.white,
         body:SingleChildScrollView(
