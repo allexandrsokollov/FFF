@@ -37,8 +37,8 @@
 
 ## Видео
 
-[Видео-презентация](https://youtu.be/NwhDKvurc10?si=kDngRjMOOcPJz1_e)
+[Видео-презентация (1 аттестация)](https://youtu.be/NwhDKvurc10?si=kDngRjMOOcPJz1_e)
 
 [Видео-презентация экранов](https://github.com/allexandrsokollov/FFF/tree/main/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%BE%D0%B2)
 
-[Видео-презентация защиты проекта](https://www.youtube.com/watch?v=F2EgJ1Zpiag)
+[Видео-презентация защиты проекта](https://www.youtube.com/watch?v=lV6W5kW1Oz4)
