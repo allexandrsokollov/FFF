@@ -35,6 +35,8 @@
 
 [Курсовой проект](https://github.com/allexandrsokollov/FFF/tree/main/Курсовой%20проект)
 
+[Приложение](https://drive.google.com/drive/folders/17eUu-YbFojiFjFivgw0COhGziz0lmm4E?usp=sharing)
+
 ## Видео
 
 [Видео-презентация (1 аттестация)](https://youtu.be/NwhDKvurc10?si=kDngRjMOOcPJz1_e)
